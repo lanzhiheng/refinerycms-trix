@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trix Exditor</title>
+    <meta charset='<%= ::Rails.application.config.encoding %>' />
+    <meta httpequiv="XUACompatible" content="IE=edge,chrome=1" />
+    <%= stylesheet_link_tag 'trix.css', :media => 'all' %>
+    <%= javascript_include_tag 'trix.js' %>
+  </head>
+  <body class="trix-wrapper">
+    <form>
+      <input id="x" type="hidden" name="content">
+      <trix-editor input="x"></trix-editor>
+    </form>
+  </body>
+</html>
