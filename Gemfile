@@ -15,6 +15,7 @@ git "https://github.com/refinery/refinerycms", branch: "master" do
 end
 
 group :test do
+  gem 'selenium-webdriver'
   gem 'pry'
 end
 

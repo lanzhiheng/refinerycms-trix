@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Refinery::Trix::Engine, :at => Refinery::Core.mounted_path
+  mount Refinery::Core::Engine, :at => Refinery::Core.mounted_path
 end

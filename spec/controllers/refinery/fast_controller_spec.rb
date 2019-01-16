@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-module Refinery::Trix
+module Refinery
   RSpec.describe FastController, type: :controller do
-    routes { Refinery::Trix::Engine.routes }
+    routes { Refinery::Core::Engine.routes }
     it 'should render the trix template' do
       get :trixframe
       expect(response.status).to eq(200)
