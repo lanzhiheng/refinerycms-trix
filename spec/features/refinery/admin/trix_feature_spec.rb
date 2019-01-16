@@ -3,8 +3,6 @@ require 'rails_helper'
 RSpec.describe 'trix', :type => :feature do
   before do
     allow(Refinery::I18n).to receive(:frontend_locales).and_return [:en, :ru]
-    binding.pry
-
     # Create a page in both locales
     about_page = Mobility.with_locale(:en) do
       Refinery::Page.create :title => 'About'
@@ -25,8 +23,16 @@ RSpec.describe 'trix', :type => :feature do
     page
   end
 
+  scenario 'load trix resource', js: true do
+    visit refinery.edit_admin_page_path(about_page)
+
+    expect(page.body).to match('trix.*.js')
+    expect(page.body).to match('trix.*.css')
+  end
+
   scenario 'visit the refinery admin page', js: true do
     visit refinery.edit_admin_page_path(about_page)
-    expect(page).not_to have_selector("iframe#dialog_frame")
+    expect(page).to have_selector("trix-toolbar")
+    expect(page).to have_selector("trix-editor")
   end
 end
