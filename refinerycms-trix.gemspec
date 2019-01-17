@@ -1,12 +1,9 @@
 $:.push File.expand_path("lib", __dir__)
 
-# Maintain your gem's version:
-require "refinery/trix/version"
-
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = "refinerycms-trix"
-  spec.version     = Refinery::Trix::VERSION
+  spec.version     = "1.0.0"
   spec.authors     = ["lanzhiheng"]
   spec.email       = ["lanzhihengrj@gmail.com"]
   spec.homepage    = "https://github.com/lanzhiheng/refinerycms-trix"
