@@ -1,9 +1,10 @@
-buildFragment = (id, name) ->
+buildFragment = (id, name, originValue) ->
   # More detail https://github.com/basecamp/trix
   input = document.createElement('input')
   input.id = id
   input.type = 'hidden'
   input.name = name
+  input.value = originValue
 
   trixEditor = document.createElement('trix-editor')
   trixEditor.setAttribute('input', id)
@@ -20,7 +21,8 @@ buildFragment = (id, name) ->
 TrixEditor =
   init: () ->
     document.querySelectorAll('.visual_editor.widest').forEach (item) ->
-      wrapper = buildFragment(item.id, item.name)
+      originValue = item.textContent
+      wrapper = buildFragment(item.id, item.name, originValue)
       item.replaceWith(wrapper)
 
 $(document).on 'ready page:load', () ->
