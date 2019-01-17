@@ -1,24 +1,23 @@
-# Refinery::Trix
-Short description and motivation.
-
-## Usage
-How to use my plugin.
+# Refinery CMS Trix Editor (the visual editor)
+Refinery CMS is backed by [Trix](https://github.com/basecamp/trix)
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'refinery-trix'
+gem "refinery-trix", :git => "git@github.com:lanzhiheng/refinerycms-trix.git"
 ```
 
 And then execute:
+
 ```bash
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install refinery-trix
+Next, to install the Trix  extension run:
+
+```
+rails generate refinery:trix
 ```
 
 ## Contributing
