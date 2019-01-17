@@ -5,7 +5,7 @@ Refinery CMS is backed by [Trix](https://github.com/basecamp/trix)
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "refinery-trix", :git => "git@github.com:lanzhiheng/refinerycms-trix.git"
+gem 'refinerycms-trix', :git => 'git@github.com:lanzhiheng/refinerycms-trix.git'
 ```
 
 And then execute:
