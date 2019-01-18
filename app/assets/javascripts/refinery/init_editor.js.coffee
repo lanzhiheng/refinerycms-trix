@@ -8,6 +8,7 @@ buildFragment = (id, name, originValue) ->
 
   trixEditor = document.createElement('trix-editor')
   trixEditor.setAttribute('input', id)
+  trixEditor.classList = ['trix-content']
   trixEditor.style.minHeight = '40em'
 
   wrapper = document.createElement('div')

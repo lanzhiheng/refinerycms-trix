@@ -28,11 +28,14 @@ RSpec.describe 'trix', :type => :feature do
 
     expect(page.body).to match('trix.*.js')
     expect(page.body).to match('trix.*.css')
+    expect(page.body).to match('init_editor.*.js')
+    expect(page.body).to match('trix-content.*.css')
   end
 
   scenario 'visit the refinery admin page', js: true do
     visit refinery.edit_admin_page_path(about_page)
     expect(page).to have_selector("trix-toolbar")
     expect(page).to have_selector("trix-editor")
+    expect(page).to have_selector(".trix-content")
   end
 end

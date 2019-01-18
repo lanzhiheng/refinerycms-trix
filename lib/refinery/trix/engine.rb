@@ -9,13 +9,14 @@ module Refinery
       config.to_prepare do
         Rails.application.config.assets.precompile += %w(
           refinery/trix.css
+          refinery/trix-content.css
           refinery/trix.js
           refinery/init_editor.coffee
         )
       end
 
       after_inclusion do
-        %w(refinery/trix).each do |stylesheet|
+        %w(refinery/trix refinery/trix-content).each do |stylesheet|
           Refinery::Core.config.register_visual_editor_stylesheet stylesheet
         end
 
