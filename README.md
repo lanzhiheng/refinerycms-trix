@@ -20,6 +20,22 @@ Next, to install the Trix  extension run:
 rails generate refinery:trix
 ```
 
+## Stylesheet
+
+All the content which in the trix editor are wrapper in the class name `trix-content` within the div element whose id is `content`. So you can override the stylesheet like below
+
+``` css
+#content {
+  .trix-content {
+    h1 {
+      color: red;
+    }
+  }
+}
+```
+
+then all the main title text in your content will be red.
+
 ## Contributing
 Contribution directions go here.
 
